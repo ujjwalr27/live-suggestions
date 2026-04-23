@@ -92,15 +92,3 @@ The last 9 suggestions (3 batches × 3) are passed to the model as a memory list
 | Session-scoped state, no backend | Matches assignment scope; avoids auth/DB complexity that would distract from the core prompt-engineering challenge. |
 | `localStorage` for settings only | API key and prompts survive a page refresh (saves copy-paste friction). Transcript and chat remain ephemeral per session. |
 
-## Known Limitations
-
-- **Chrome / Edge only** for Web Speech API interim preview. Firefox shows Whisper-only committed chunks (still works, just no live preview).
-- Suggestion generation requires at least a few seconds of speech — if the transcript is empty, refresh is a no-op.
-- No backend; all API calls go directly from the browser, so the Groq API key is visible in browser network tools.
-
-## Deployment
-
-Deployable on Vercel, Netlify, Replit, or any static host with HTTPS (required for microphone access).
-
-- **Public app URL**: `<add deployed URL here>`
-- **GitHub repository**: `<add repository URL here>`
